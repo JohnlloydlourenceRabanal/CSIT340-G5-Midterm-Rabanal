@@ -1,18 +1,11 @@
+import StatCard from "./StatCard";
+
 function Stats(props) {
   return (
     <div className="flex justify-center gap-6 pb-8">
-      <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-        <p className="text-4xl font-bold">{props.stars}</p>
-        <p className="mt-1 text-lg text-[#000000]">Stars</p>
-      </div>
-      <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-        <p className="text-4xl font-bold">{props.downloads}</p>
-        <p className="mt-1 text-lg text-[#000000]">Downloads</p>
-      </div>
-      <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-        <p className="text-4xl font-bold">{props.issues}</p>
-        <p className="mt-1 text-lg text-[#000000]">Issues reported</p>
-      </div>
+      <StatCard value={props.stars} label="Stars" />
+      <StatCard value={props.downloads} label="Downloads" />
+      <StatCard value={props.issues} label="Issues reported" />
     </div>
   );
 }
